@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: zxing-cpp
-  version: "2.3.0"
+  version: "3.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/zxing_cpp-${{ version }}.tar.gz
-  sha256: 3babedb67a4c15c9de2c2b4c42d70af83a6c85780c1b2d9803ac64c6ae69f14e
+  sha256: 703353304de24d947bd68044fac4e062953a7b64029de6941ba8ffeb4476b60d
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -24,18 +24,18 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - pybind11-global <3.0.0
+        - pybind11-global
     - ${{ compiler("c") }}
     - ${{ compiler("cxx") }}
     - ${{ stdlib('c') }}
-    - cmake >=3.15,<4.0.0
+    - cmake >=3.18
     - make
     - pkg-config
   host:
     - python
-    - setuptools >=42,<81.0.0
+    - setuptools >=77
     - wheel
-    - pybind11-global <3.0.0
+    - pybind11-global
     - pip
   run:
     - python
