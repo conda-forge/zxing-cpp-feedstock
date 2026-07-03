@@ -24,18 +24,18 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - pybind11-global <3.0.0
+        - pybind11-global
     - ${{ compiler("c") }}
     - ${{ compiler("cxx") }}
     - ${{ stdlib('c') }}
-    - cmake >=3.15,<4.0.0
+    - cmake >=3.18
     - make
     - pkg-config
   host:
     - python
-    - setuptools >=42,<81.0.0
+    - setuptools >=77
     - wheel
-    - pybind11-global <3.0.0
+    - pybind11-global
     - pip
   run:
     - python
