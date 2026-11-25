@@ -1,5 +1,5 @@
 context:
-  version: "3.1.1"
+  version: "3.2.0"
 
 package:
   name: zxing-cpp
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/zxing-cpp/zxing-cpp/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 7286b1e6ade66fe82b7c8208b4595deeb55d6486b410834fdc65702f46650542
+  sha256: 0cf0921252cfdff4efacdeb2825429db3ca92b3aa5876c757c7495bb312768b6
 
 build:
   number: 0
